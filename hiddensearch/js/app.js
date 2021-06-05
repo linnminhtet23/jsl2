@@ -7,4 +7,7 @@ const input =document.querySelector('.input');
 btn.addEventListener('click',()=>{
     // console.log("hay");
     search.classList.toggle('active');
+
+    input.focus();
+    
 })
