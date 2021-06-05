@@ -34,7 +34,9 @@ position:absolute;
     right:0;
 }
 h1{
-    font-size: 64px;
+    /* (Relative to font-size: of the root element ;) */
+    /* 1rem = 16px */
+    font-size: rem;
     color: #fff;
     text-shadow: 10px 0 10px rgba(0, 0, 0, 0.3);
 }
