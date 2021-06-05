@@ -3,11 +3,14 @@
 :root{
     --left-btn-hover-color:#6032a8;
     --right-btn-hover-color:#92a832;
+
     --leftbg-color:linear-gradient(45deg,rgba(205,219,127,0.1),rgba(211,41,127,0.1));
     --rightbg-color:linear-gradient(45deg,rgba(228,212,127,0.2),rgba(37,235,127,0.2));
+    
     --hover-width:75%;
     --other-width:25%;
     
+    --speed: 1000ms;
 }
 *{
     box-sizing: border-box;
@@ -96,19 +99,22 @@ h1{
     position: absolute;
  
 }
-/* .hover-left .left{
-    width: var(--hoverwidth);
+.split.left,.split.left::before,.split.right,.split.right::before{
+    transition: all var(--speed) in ease-out;
+}
+.hover-left .left{
+    width: var(--hover-width);
 }
 .hover-left .right{
-    width:var(--otherwidth);
+    width:var(--other-width);
 }
 
 .hover-right .left{
-    width:var(--otherwidth);
+    width:var(--other-width);
 }
 .hover-right .right{
-    width: var(--hoverwidth);
-} */
+    width: var(--hover-width);
+}
 
 @media(max-width:800px){
     h1{
