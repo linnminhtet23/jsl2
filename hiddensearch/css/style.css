@@ -24,6 +24,11 @@ body{
     border: 0;
     font-size: 18px;
     padding: 15px;
+    transition: width 0.3s ease ;
+    font-family: inherit;
+}
+.search .input::placeholder{
+    color: silver;
 }
 .search .btn{
     width: 50px;
@@ -37,6 +42,8 @@ body{
 
     top: 0;
     left: 0;
+    /* transform: width 0.3s ease */
+    transition: transform 0.3s;
 }
 
 .btn:focus,.input:focus{
@@ -48,5 +55,5 @@ body{
 }
 
 .search.active .btn{
-    transform:translateX(200px);
+    transform:translateX(199px);
 }
