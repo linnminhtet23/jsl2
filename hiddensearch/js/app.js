@@ -8,6 +8,6 @@ btn.addEventListener('click',()=>{
     // console.log("hay");
     search.classList.toggle('active');
 
-    input.focus();
+    input.focus();//already add cursor
     
 })
