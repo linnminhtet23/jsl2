@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap");
+* {
+  box-sizing: border-box; /*ဘေးဘယ်ညာ ညှိ */
+}
+body {
+  font-family: "Roboto", sans-serif;
+  background-color: #f4f4f4;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+.container {
+  background-color: #fff;
+  border: 3px solid #000;
+  border-radius: 30px;
+  max-width: 1000px;
+  text-align: center;
+  padding: 30px;
+}
+.container .code-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px 8px;
+}
+
+.code-container .code {
+  width: 100px;
+  height: 120px;
+  font-size: 75px;
+  font-weight: 300;
+  border-radius: 5px;
+  border: 1px solid #eee;
+  margin: 5px;
+  text-align: center;
+  /* for moz */
+  -moz-appearance: textfield;
+  appearance:none;
+}
+/* for chrome*/
+.code::-webkit-outer-spin-button,
+.code::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+.container .info{
+    content:#777;
+    background-color: #c2c4c3;
+    padding: 10px;
+    border-radius: 5px;
+    display:inline-block;
+    max-width: 400px;
+    line-height: 20px;
+}
+.code:valid{
+    border-color: blue;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.25);
+}
+@media (max-width:600px){
+    .code-container{
+        flex-wrap: wrap;/* The flex-wrap property specifies whether the flexible items should wrap or not. */
+
+
+    }
+    .code{
+        max-width: 70px;
+        height: 80px;
+        font-size: 60px;
+    }
+}

@@ -25,18 +25,30 @@ body{
     justify-content: space-between;
     width: 350px;
     margin-bottom: 30px;
+    position: relative;
+    
 }
 .container .pregress-container::before{
     content: '';
     background-color:var(--noneactive-color) ;
-    width: 100%;
+    width: 100%;/*350px*/
     height: 4px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);/* translateY is to half the height of the pixel*/
+    z-index: -1;
 }
 .pregress-container .progress{
     background-color: var(--active-color);
-    width: 50%;
+    width: 0;
     height: 4px;
-
+    position: absolute;
+    top: 50%;
+    left:0;
+    transform:translateY(-50%);
+    z-index: -1;
+    transition: 0.4s ease;
 }
 .pregress-container .circle{
     background-color:#fff;
@@ -48,6 +60,11 @@ body{
     justify-content: center;
     align-items: center;
     border: 3px solid var(--noneactive-color);
+    transition: 0.4s ease;
+    
+}
+.pr0gress-container .circle.active{
+    border-color: var(--active-color);
 }
 .container .btn{
     background-color: var(--active-color);
@@ -61,7 +78,7 @@ body{
 
 }
 .container .btn:focus{
-    outline: o;
+    outline: 0;
 }
 
 .container .btn:active{
