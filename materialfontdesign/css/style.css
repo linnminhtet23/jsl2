@@ -27,8 +27,68 @@ body{
 .form-control{
     width: 300px;
     margin: 20px 0 40px;
+    position: relative;
 }
 
 .form-control .input{
     display: block;
+    width: 100%;
+    padding: 15px 0;
+    font-size: 18px;
+    border:none;
+    background-color: transparent;
+    border-bottom:2px solid #fff;
+    color: #fff;
+
+}
+
+.form-control .input:focus{
+    outline: 0;
+    border-bottom-color: #34cceb;
+}
+
+.btn{
+    cursor: pointer;
+    padding: 15px;
+    background-color: #34cceb;
+    border: none;
+    border-radius: 5px;
+    width: 100%;
+    font-family: inherit;
+    font-size: 16px;
+}
+
+.btn:focus{
+    outline: 0;
+}
+
+.btn:active{
+    transform: scale(0.98);
+}
+
+.text{
+    margin-top: 30px;
+}
+
+.container a{
+    text-decoration: none;
+    color: #34cceb;
+}
+.form-control label{
+    position: absolute;
+    top: 15px;
+    left: 0;
+}
+.form-control label span{
+    /* color: #34cceb; */
+    font-size: 18px;
+    display: inline-block;
+    transition: 0.3s ease;
+}
+
+.form-control .input:focus + label span,
+.form-control .input:valid + label span
+{
+color:#34cceb;
+transform: translateY(-30px);
 }
